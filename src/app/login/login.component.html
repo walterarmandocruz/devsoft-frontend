@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <span>INGRESO AL SISTEMA</span>
+</mat-toolbar>
+<mat-card class="my-card">
+    <mat-card-content>
+        <form class="my-form" #f="ngForm">
+            <mat-form-field class="full-width">
+                <mat-label>Username</mat-label>
+                <input [(ngModel)]="username" matInput placeholder="Username" name="username" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" [(ngModel)]="password" matInput placeholder="Password" name="password" required>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="login(f)" color="primary">Acceder</button>
+    </mat-card-actions>
+</mat-card>
